@@ -51,3 +51,5 @@ ADMINS = ['you@example.com']
 # pagination
 POSTS_PER_PAGE = 50
 MAX_SEARCH_RESULTS = 50
+
+WHOOSH_ENABLED = os.environ.get('HEROKU') is None

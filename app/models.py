@@ -3,7 +3,11 @@ import re
 from app import db
 from app import app
 from config import WHOOSH_ENABLED
+from config import WHOOSH_ENABLED
 
+enable_search = WHOOSH_ENABLED
+if enable_search:
+    import flask.ext.whooshalchemy as whooshalchemy
 import sys
 if sys.version_info >= (3, 0):
     enable_search = False
